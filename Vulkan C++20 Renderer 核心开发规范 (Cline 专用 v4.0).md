@@ -47,3 +47,9 @@
 3. **格式化**: 运行 `clang-format` 修正代码。
 4. **验证**: 执行 `cmake --build build` 并运行 `ctest`。
 5. **归档**: 更新文档，总结任务完成情况。
+
+## 8. Sample 开发规范
+- **继承约束**: 所有新示例必须继承自 `vk_engine::SampleBase`。
+- **资源隔离**: 示例专用的 Shader 必须存放在各自的子目录下，不得污染核心 `shaders/` 目录。
+- **零干扰原则**: 开发 Sample 时禁止修改 `Layer 0` 和 `Layer 1` 的核心代码。如果核心层功能不足，必须先重构核心层并确保旧 Sample 的 UT 通过。
+- **示例模板**: 每次创建新 Sample，Cline 必须先复制 `samples/template` 的结构，确保 CMake 配置一致。

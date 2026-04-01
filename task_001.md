@@ -10,3 +10,8 @@ python3 -c "import urllib.request; print(urllib.request.urlopen('https://chrome-
 gn.py: Could not find gn executable at: ['/home/guanxw/tizen/libwebrtc_build/src/buildtools/linux64/gn/gn', '/home/guanxw/tizen/libwebrtc_build/src/buildtools/linux64/gn']
 Either GN isn't installed on your system, or you're not running in a checkout with a preinstalled gn binary.
 
+Running hooks:  82% (23/28)
+________ running 'download_from_google_storage --directory --recursive --num_threads=10 --no_auth --quiet --bucket chromium-webrtc-resources src/resources' in '/home/guanxw/tizen/libwebrtc_build'
+--no_auth is deprecated, this flag has no effect.
+The NO_AUTH_BOTO_CONFIG environment variable is deprecated and  has no effect. gsutil.py will always use any [GSUtil] or [Boto]  settings in the .boto configuration file, regardless of  whether you're logged in with luci-auth.
+

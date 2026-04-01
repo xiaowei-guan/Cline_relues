@@ -17,4 +17,5 @@ The NO_AUTH_BOTO_CONFIG environment variable is deprecated and  has no effect. g
 
 
 gclient run python3 -c "import sys; print(sys.executable); print(sys.version)"
+gclient run python3 -c "import sys; print(sys.executable)"
 

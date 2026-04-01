@@ -6,3 +6,7 @@
 
 # 终端直接运行
 python3 -c "import urllib.request; print(urllib.request.urlopen('https://chrome-infra-packages.appspot.com').getcode())"
+/home/guanxw/tizen/libwebrtc_build/.gclient_entries missing, .gclient file in parent directory /home/guanxw/tizen/libwebrtc_build might not be the file you want to use.
+gn.py: Could not find gn executable at: ['/home/guanxw/tizen/libwebrtc_build/src/buildtools/linux64/gn/gn', '/home/guanxw/tizen/libwebrtc_build/src/buildtools/linux64/gn']
+Either GN isn't installed on your system, or you're not running in a checkout with a preinstalled gn binary.
+

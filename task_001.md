@@ -15,3 +15,6 @@ ________ running 'download_from_google_storage --directory --recursive --num_thr
 --no_auth is deprecated, this flag has no effect.
 The NO_AUTH_BOTO_CONFIG environment variable is deprecated and  has no effect. gsutil.py will always use any [GSUtil] or [Boto]  settings in the .boto configuration file, regardless of  whether you're logged in with luci-auth.
 
+
+gclient run python3 -c "import sys; print(sys.executable); print(sys.version)"
+

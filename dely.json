@@ -1,0 +1,9 @@
+{
+  "flightNumber": "OS 87",
+  "date": "Mon, Dec 15",
+  "origin": "Vienna",
+  "destination": "New York",
+  "departureTime": "11:45 AM",
+  "status": "Delayed",
+  "arrivalTime": "4:00 PM"
+}

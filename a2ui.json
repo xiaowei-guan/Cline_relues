@@ -1,270 +1,71 @@
-[
-  {
-    "id": "root",
-    "component": {
-      "Card": {
-        "child": "main-column"
-      }
-    }
-  },
-  {
-    "id": "main-column",
-    "component": {
-      "Column": {
-        "children": {
-          "explicitList": [
-            "header-row",
-            "route-row",
-            "divider",
-            "times-row"
-          ]
+{
+  "kind": "A2uiMessage",
+  "version": "1.0",
+  "surfaceUpdate": {
+    "surfaceId": "product_card_001",
+    "dataModel": {
+      "productName": "极简智能手表",
+      "price": "￥1999",
+      "isStocked": true
+    },
+    "components": [
+      {
+        "id": "root_container",
+        "type": "container",
+        "props": {
+          "padding": 16,
+          "backgroundColor": "#F5F5F5",
+          "borderRadius": 12
         },
-        "gap": "small",
-        "alignment": "stretch"
+        "children": [
+          {
+            "id": "header_image",
+            "type": "image",
+            "props": {
+              "url": "https://example.com/watch.jpg",
+              "height": 200,
+              "fit": "cover"
+            }
+          },
+          {
+            "id": "title_text",
+            "type": "text",
+            "props": {
+              "value": "${data.productName}",
+              "fontSize": 20,
+              "fontWeight": "bold",
+              "color": "#333333"
+            }
+          },
+          {
+            "id": "price_tag",
+            "type": "text",
+            "props": {
+              "value": "${data.price}",
+              "color": "#FF4400",
+              "fontSize": 18
+            }
+          },
+          {
+            "id": "buy_button",
+            "type": "button",
+            "props": {
+              "label": "立即购买",
+              "variant": "filled",
+              "enabled": "${data.isStocked}"
+            },
+            "events": {
+              "onTap": {
+                "action": "call_tool",
+                "toolName": "process_purchase",
+                "parameters": {
+                  "id": "watch_001"
+                }
+              }
+            }
+          }
+        ]
       }
-    }
-  },
-  {
-    "id": "header-row",
-    "component": {
-      "Row": {
-        "children": {
-          "explicitList": [
-            "header-left",
-            "date"
-          ]
-        },
-        "distribution": "spaceBetween",
-        "alignment": "center"
-      }
-    }
-  },
-  {
-    "id": "header-left",
-    "component": {
-      "Row": {
-        "children": {
-          "explicitList": [
-            "flight-indicator",
-            "flight-number"
-          ]
-        },
-        "gap": "small",
-        "alignment": "center"
-      }
-    }
-  },
-  {
-    "id": "flight-indicator",
-    "component": {
-      "Icon": {
-        "name": {
-          "literalString": "flight"
-        }
-      }
-    }
-  },
-  {
-    "id": "flight-number",
-    "component": {
-      "Text": {
-        "text": {
-          "path": "/flightNumber"
-        },
-        "usageHint": "h3"
-      }
-    }
-  },
-  {
-    "id": "date",
-    "component": {
-      "Text": {
-        "text": {
-          "path": "/date"
-        },
-        "usageHint": "caption"
-      }
-    }
-  },
-  {
-    "id": "route-row",
-    "component": {
-      "Row": {
-        "children": {
-          "explicitList": [
-            "origin",
-            "arrow",
-            "destination"
-          ]
-        },
-        "gap": "small",
-        "alignment": "center"
-      }
-    }
-  },
-  {
-    "id": "origin",
-    "component": {
-      "Text": {
-        "text": {
-          "path": "/origin"
-        },
-        "usageHint": "h2"
-      }
-    }
-  },
-  {
-    "id": "arrow",
-    "component": {
-      "Text": {
-        "text": {
-          "literalString": "→"
-        },
-        "usageHint": "h2"
-      }
-    }
-  },
-  {
-    "id": "destination",
-    "component": {
-      "Text": {
-        "text": {
-          "path": "/destination"
-        },
-        "usageHint": "h2"
-      }
-    }
-  },
-  {
-    "id": "divider",
-    "component": {
-      "Divider": {}
-    }
-  },
-  {
-    "id": "times-row",
-    "component": {
-      "Row": {
-        "children": {
-          "explicitList": [
-            "departure-col",
-            "status-col",
-            "arrival-col"
-          ]
-        },
-        "distribution": "spaceBetween"
-      }
-    }
-  },
-  {
-    "id": "departure-col",
-    "component": {
-      "Column": {
-        "children": {
-          "explicitList": [
-            "departure-label",
-            "departure-time"
-          ]
-        },
-        "alignment": "start",
-        "gap": "none"
-      }
-    }
-  },
-  {
-    "id": "departure-label",
-    "component": {
-      "Text": {
-        "text": {
-          "literalString": "Departs"
-        },
-        "usageHint": "caption"
-      }
-    }
-  },
-  {
-    "id": "departure-time",
-    "component": {
-      "Text": {
-        "text": {
-          "path": "/departureTime"
-        },
-        "usageHint": "h3"
-      }
-    }
-  },
-  {
-    "id": "status-col",
-    "component": {
-      "Column": {
-        "children": {
-          "explicitList": [
-            "status-label",
-            "status-value"
-          ]
-        },
-        "alignment": "center",
-        "gap": "none"
-      }
-    }
-  },
-  {
-    "id": "status-label",
-    "component": {
-      "Text": {
-        "text": {
-          "literalString": "Status"
-        },
-        "usageHint": "caption"
-      }
-    }
-  },
-  {
-    "id": "status-value",
-    "component": {
-      "Text": {
-        "text": {
-          "path": "/status"
-        },
-        "usageHint": "body"
-      }
-    }
-  },
-  {
-    "id": "arrival-col",
-    "component": {
-      "Column": {
-        "children": {
-          "explicitList": [
-            "arrival-label",
-            "arrival-time"
-          ]
-        },
-        "alignment": "end",
-        "gap": "none"
-      }
-    }
-  },
-  {
-    "id": "arrival-label",
-    "component": {
-      "Text": {
-        "text": {
-          "literalString": "Arrives"
-        },
-        "usageHint": "caption"
-      }
-    }
-  },
-  {
-    "id": "arrival-time",
-    "component": {
-      "Text": {
-        "text": {
-          "path": "/arrivalTime"
-        },
-        "usageHint": "h3"
-      }
-    }
+    ]
   }
-]
+}

@@ -1,105 +1,13 @@
 {
-  "version": "0.9",
-  "pageName": "ProductDetail",
-  "root": {
-    "type": "Scaffold",
-    "props": {
-      "backgroundColor": "#F5F5F5"
-    },
-    "children": [
+  "version": "v0.9",
+  "updateComponents": {
+    "surfaceId": "main",
+    "components": [
       {
-        "type": "AppBar",
-        "props": {
-          "title": "商品详情",
-          "elevation": 2.0,
-          "centerTitle": true
-        }
-      },
-      {
-        "type": "SingleChildScrollView",
-        "children": [
-          {
-            "type": "Column",
-            "props": {
-              "crossAxisAlignment": "start",
-              "mainAxisSize": "min"
-            },
-            "children": [
-              {
-                "type": "Image",
-                "props": {
-                  "src": "https://example.com/banner.jpg",
-                  "fit": "cover",
-                  "height": 200.0,
-                  "width": "double.infinity"
-                }
-              },
-              {
-                "type": "Padding",
-                "props": {
-                  "padding": [16.0, 16.0, 16.0, 8.0]
-                },
-                "children": [
-                  {
-                    "type": "Text",
-                    "props": {
-                      "text": "高级智能降噪耳机",
-                      "style": {
-                        "fontSize": 20.0,
-                        "fontWeight": "bold",
-                        "color": "#333333"
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "Padding",
-                "props": {
-                  "padding": [16.0, 0.0, 16.0, 16.0]
-                },
-                "children": [
-                  {
-                    "type": "Row",
-                    "children": [
-                      {
-                        "type": "Text",
-                        "props": {
-                          "text": "¥2,999",
-                          "style": {
-                            "fontSize": 24.0,
-                            "color": "#FF4400",
-                            "fontWeight": "w600"
-                          }
-                        }
-                      },
-                      {
-                        "type": "Spacer"
-                      },
-                      {
-                        "type": "ElevatedButton",
-                        "props": {
-                          "onTap": "action://buy_now",
-                          "style": {
-                            "backgroundColor": "#FF4400",
-                            "foregroundColor": "#FFFFFF",
-                            "borderRadius": 8.0
-                          },
-                          "child": {
-                            "type": "Text",
-                            "props": {
-                              "text": "立即购买"
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "id": "root",
+        "component": "Text",
+        "text": "Hello World!",
+        "variant": "h1"
       }
     ]
   }
